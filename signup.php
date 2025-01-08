@@ -196,7 +196,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
             <p class="text-center mt-3">
                 Already have an account? 
-                <a href="login_process.php" class="btn btn-login btn-sm">Login here</a>
+                <a href="login.php" class="btn btn-login btn-sm">Login here</a>
             </p>
         </div>
 
