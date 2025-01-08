@@ -10,7 +10,7 @@ class Dashboard {
 
     public function checkSession() {
         if (!isset($this->session['user_id'])) {
-            header('Location: login_process.php');
+            header('Location: login.php');
             exit();
         }
     }
