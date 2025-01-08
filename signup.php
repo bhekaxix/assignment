@@ -105,7 +105,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -114,51 +113,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Sign Up</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #87CEEB; /* Sky Blue */
-            font-family: Arial, sans-serif;
-        }
-
-        .form-container {
-            background-color: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .form-label {
-            color: black;
-        }
-
-        input.form-control {
-            transition: background-color 0.3s ease; /* Smooth transition */
-        }
-
-        input.form-control:hover {
-            background-color: #f0f0f0; /* Light grey on hover */
-        }
-
-        .btn-signup {
-            background-color: green;
-            color: white;
-            border: none;
-        }
-
-        .btn-signup:hover {
-            background-color: darkgreen;
-        }
-
-        .btn-login {
-            background-color: grey;
-            color: white;
-            border: none;
-        }
-
-        .btn-login:hover {
-            background-color: darkgrey;
-        }
-    </style>
+    <!-- Link to external CSS -->
+    <link href="signup.css" rel="stylesheet">
 </head>
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100">
@@ -218,3 +174,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+ 
