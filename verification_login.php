@@ -58,7 +58,7 @@ class OTPVerification {
 
 // Main Logic
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login_process.php');
+    header('Location: login.php');
     exit();
 }
 
