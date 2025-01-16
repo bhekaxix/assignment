@@ -63,28 +63,32 @@ class UserLogin {
         return $otp;
     }
 
-    public function sendOTP($email, $otp) {
+    public function sendOtpEmail($recipientEmail, $recipientName, $otp) {
         $mail = new PHPMailer(true);
 
         try {
+            // Server settings
             $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';
-            $mail->SMTPAuth = true;
-            $mail->Username = 'taongabp@gmail.com';
-            $mail->Password = 'xjguxbwosrfxpkop';
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'taongabp@gmail.com'; // Replace with your email
+            $mail->Password   = 'xjguxbwosrfxpkop'; // Replace with your app-specific password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-            $mail->Port = 465;
+            $mail->Port       = 465;
 
-            $mail->setFrom('from@example.com', 'BBIT Exempt');
-            $mail->addAddress($email);      //Add a recipient
+            // Recipient settings
+            $mail->setFrom('taongabp@gmail.com', 'BBIT Exempt');
+            $mail->addAddress($recipientEmail, $recipientName); // Use user's email
 
+
+            // Email content
             $mail->isHTML(true);
-            $mail->Subject = 'Your Login Verification Code';
-            $mail->Body = "Your OTP code is: <strong>$otp</strong>. It expires in 5 minutes.";
+            $mail->Subject = 'Your Verification Code';
+            $mail->Body    = "Your OTP code is: <strong>$otp</strong>. It expires in 5 minutes.";
 
-            $mail->send();
+            return $mail->send();
         } catch (Exception $e) {
-            die("Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
+            throw new Exception("Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
         }
     }
 }
