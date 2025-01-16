@@ -55,8 +55,8 @@ class UserRegistration {
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'taonga.phiri@strathmore.edu';
-            $mail->Password   = 'ycucituozciixvta'; // Replace with your SMTP password
+            $mail->Username   = 'taongabp@gmail.com';
+            $mail->Password   = 'xjguxbwosrfxpkop'; // Replace with your SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = 465;
 
