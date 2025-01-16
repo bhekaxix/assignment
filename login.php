@@ -70,13 +70,13 @@ class UserLogin {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'taonga.phiri@strathmore.edu';
-            $mail->Password = 'ycucituozciixvta';
+            $mail->Username = 'taongabp@gmail.com';
+            $mail->Password = 'xjguxbwosrfxpkop';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
 
             $mail->setFrom('from@example.com', 'BBIT Exempt');
-            $mail->addAddress('taonga.phiri@strathmore.edu', 'Taonga Bheka');     //Add a recipient
+            $mail->addAddress('taongabp@gmail.com', 'Taonga Bheka');     //Add a recipient
 
             $mail->isHTML(true);
             $mail->Subject = 'Your Login Verification Code';

@@ -62,7 +62,7 @@ class UserRegistration {
 
             // Recipient settings
             $mail->setFrom('from@example.com', 'BBIT Exempt');
-            $mail->addAddress('taonga.phiri@strathmore.edu', 'Taonga Bheka');     //Add a recipient
+            $mail->addAddress('taongabp@gmail.com', 'Taonga Bheka');     //Add a recipient
 
             // Email content
             $mail->isHTML(true);
