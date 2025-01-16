@@ -55,14 +55,14 @@ class UserRegistration {
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'taongabp@gmail.com';
-            $mail->Password   = 'xjguxbwosrfxpkop'; // Replace with your SMTP password
+            $mail->Username   = 'taongabp@gmail.com'; // Replace with your email
+            $mail->Password   = 'xjguxbwosrfxpkop'; // Replace with your app-specific password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = 465;
 
             // Recipient settings
-            $mail->setFrom('from@example.com', 'BBIT Exempt');
-            $mail->addAddress('taongabp@gmail.com', 'Taonga Bheka');     //Add a recipient
+            $mail->setFrom('taongabp@gmail.com', 'BBIT Exempt');
+            $mail->addAddress($recipientEmail, $recipientName); // Use user's email
 
             // Email content
             $mail->isHTML(true);
@@ -155,23 +155,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a href="login.php" class="btn btn-login btn-sm">Login here</a>
             </p>
         </div>
-
-        <div class="form-container col-md-6 d-none" id="verification-form">
-            <h1 class="text-center mb-4">Verify Your Account</h1>
-            <form action="verify_process.php" method="POST">
-                <div class="mb-3">
-                    <label for="verificationCode" class="form-label">Verification Code:</label>
-                    <input type="text" id="verificationCode" name="verificationCode" class="form-control" placeholder="Enter the code sent to your email" required>
-                </div>
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-signup">Verify</button>
-                </div>
-            </form>
-        </div>
     </div>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
- 

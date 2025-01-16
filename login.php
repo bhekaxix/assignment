@@ -76,7 +76,7 @@ class UserLogin {
             $mail->Port = 465;
 
             $mail->setFrom('from@example.com', 'BBIT Exempt');
-            $mail->addAddress('taongabp@gmail.com', 'Taonga Bheka');     //Add a recipient
+            $mail->addAddress($email);      //Add a recipient
 
             $mail->isHTML(true);
             $mail->Subject = 'Your Login Verification Code';
